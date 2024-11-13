@@ -4,7 +4,7 @@ import { profile1, profile2, profile3, usImage } from "../assets/images";
 
 const AboutPage = () => {
   return (
-    <main className="max-w-5xl mx-auto">
+    <main className="max-w-5xl mx-auto py-20">
       <MetaTags
         title="What is Little Lemon"
         description="Welcome to Little Lemon, where each dish is crafted with love and

@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar/NavBar";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="w-full flex justify-center h-screen overflow-y-auto  pt-20 bg-backGround">
+    <div className="w-full flex justify-center h-screen overflow-y-auto  !py-20 bg-backGround">
       <NavBar />
       {children}
     </div>

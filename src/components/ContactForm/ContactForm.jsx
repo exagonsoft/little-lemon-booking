@@ -8,6 +8,7 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
@@ -15,21 +16,30 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = "Name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.subject) newErrors.subject = "Subject is required";
+    if (!formData.message) newErrors.message = "Message is required";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate form submission (You could replace this with a real API call)
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
+    if (validate()) {
+      console.log("Form submitted:", formData);
+      setSubmitted(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
 
-    // Reset the form after submission
-    setFormData({ name: "", email: "", subject: "", message: "" });
-
-    // Remove the success message after a delay
-    setTimeout(() => setSubmitted(false), 3000);
+      setTimeout(() => setSubmitted(false), 3000);
+      setErrors({});
+    }
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-8 bg-gradient-to-br from-primary to-secondary shadow-lg rounded-xl">
+    <div className="max-w-5xl mx-auto p-8 bg-gradient-to-br from-primary to-secondary shadow-lg rounded-xl">
       <h1 className="text-4xl font-bold text-backGround mb-6 text-center">
         Contact Us
       </h1>
@@ -52,9 +62,10 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            required
             className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-secondary/50"
+            required
           />
+          {errors.name && <p className="text-red-600">{errors.name}</p>}
         </div>
         <div>
           <label
@@ -69,9 +80,10 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            required
             className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-secondary/50"
+            required
           />
+          {errors.email && <p className="text-red-600">{errors.email}</p>}
         </div>
         <div>
           <label
@@ -86,9 +98,10 @@ const ContactForm = () => {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            required
             className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-secondary/50"
+            required
           />
+          {errors.subject && <p className="text-red-600">{errors.subject}</p>}
         </div>
         <div>
           <label
@@ -102,10 +115,11 @@ const ContactForm = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-secondary/50"
             required
             rows="5"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-4 focus:ring-secondary/50"
           ></textarea>
+          {errors.message && <p className="text-red-600">{errors.message}</p>}
         </div>
         <button
           type="submit"
