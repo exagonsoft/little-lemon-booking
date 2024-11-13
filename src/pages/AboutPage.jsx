@@ -1,6 +1,6 @@
 import React from "react";
 import MetaTags from "../components/ui/MetaTags";
-import { usImage } from "../assets/images";
+import { profile1, profile2, profile3, usImage } from "../assets/images";
 
 const AboutPage = () => {
   return (
@@ -64,7 +64,7 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-gray-100 rounded-lg p-4 text-center shadow-md">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src={profile1}
                   alt="Team member"
                   className="w-24 h-24 mx-auto mb-4 rounded-full"
                 />
@@ -75,7 +75,7 @@ const AboutPage = () => {
               </div>
               <div className="bg-gray-100 rounded-lg p-4 text-center shadow-md">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src={profile2}
                   alt="Team member"
                   className="w-24 h-24 mx-auto mb-4 rounded-full"
                 />
@@ -86,7 +86,7 @@ const AboutPage = () => {
               </div>
               <div className="bg-gray-100 rounded-lg p-4 text-center shadow-md">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src={profile3}
                   alt="Team member"
                   className="w-24 h-24 mx-auto mb-4 rounded-full"
                 />

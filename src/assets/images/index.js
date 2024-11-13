@@ -11,7 +11,10 @@ import seaPaella from "./sea-paella.png";
 import spinashSlice from "./spinash-slice.png";
 import styfedGrapes from "./stuffed-grapes.png";
 import Error from "./error.png";
-import usImage from './us-image.png';
+import usImage from "./us-image.png";
+import profile1 from "./profile-1.jpg";
+import profile2 from "./profile-2.jpg";
+import profile3 from "./profile-3.jpg";
 
 export {
   heroSplash,
@@ -27,5 +30,8 @@ export {
   spinashSlice,
   styfedGrapes,
   Error,
-  usImage
+  usImage,
+  profile1,
+  profile2,
+  profile3,
 };
