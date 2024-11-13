@@ -1,8 +1,13 @@
 import React from 'react'
+import HeroSection from '../components/Hero/HeroSection'
+import FeaturedSection from '../components/Hero/FeaturedSection'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <main className="">
+        <HeroSection />
+        <FeaturedSection />
+    </main>
   )
 }
 
