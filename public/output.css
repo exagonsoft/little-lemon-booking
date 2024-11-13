@@ -1288,6 +1288,10 @@ body {
     width: 50%;
   }
 
+  .md\:max-w-\[90\%\] {
+    max-width: 90%;
+  }
+
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1296,8 +1300,8 @@ body {
     flex-direction: row;
   }
 
-  .md\:gap-4 {
-    gap: 1rem;
+  .md\:gap-20 {
+    gap: 5rem;
   }
 
   .md\:p-20 {

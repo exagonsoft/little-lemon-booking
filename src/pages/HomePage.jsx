@@ -5,7 +5,7 @@ import MetaTags from "../components/ui/MetaTags";
 
 const HomePage = () => {
   return (
-    <main className="">
+    <main className="w-full flex flex-col items-center">
       <MetaTags
         title="Welcome Friend"
         description="Welcome to Little Lemon, where each dish is crafted with love and

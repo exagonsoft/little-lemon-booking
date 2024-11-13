@@ -26,6 +26,14 @@ const SideBar = (props) => {
             </div>
             <div className="w-full p-4 justify-start">
               <ul className="flex flex-col justify-center items-center gap-4">
+              <li className="group px-4">
+                    <a
+                      href="/"
+                      className="text-lg text-backGround transition-all ease-in-out duration-300 font-semibold group-hover:text-xl"
+                    >
+                      Home
+                    </a>
+                  </li>
                 {navRoutes.map((route, indx) => (
                   <li key={indx} className="group px-4">
                     <a
@@ -50,7 +58,7 @@ const NavBar = () => {
   const [showSideBar, setShowSideBar] = useState(false);
 
   return (
-    <nav className="fixed w-full top-0 left-0 p-4 flex justify-between items-center bg-primary shadow-md">
+    <nav className="fixed z-50 w-full top-0 left-0 p-4 flex justify-between items-center bg-primary shadow-md">
       <NavBarIcon />
       {!isMobile && (
         <ul className="flex justify-center items-center gap-4">
