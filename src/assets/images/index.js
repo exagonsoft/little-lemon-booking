@@ -10,6 +10,8 @@ import mediterranChicken from "./mediterran-chicken.png";
 import seaPaella from "./sea-paella.png";
 import spinashSlice from "./spinash-slice.png";
 import styfedGrapes from "./stuffed-grapes.png";
+import Error from "./error.png";
+import usImage from './us-image.png';
 
 export {
   heroSplash,
@@ -24,4 +26,6 @@ export {
   seaPaella,
   spinashSlice,
   styfedGrapes,
+  Error,
+  usImage
 };

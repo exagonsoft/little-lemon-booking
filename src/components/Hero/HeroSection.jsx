@@ -1,6 +1,6 @@
 import React from "react";
-import HeroSplash from "../../assets/images/hero-splash.png";
-import Button from "./ui/Button";
+import Button from "../ui/Button";
+import { heroSplash } from "../../assets/images";
 
 const HeroSection = () => {
   return (
@@ -23,16 +23,12 @@ const HeroSection = () => {
           text="Book Your Table Today!"
         />
         {/* <h3 className="text-primary font-semibold text-lg">
-          Welcome to Little Lemon, where each dish is crafted with love and
-          authentic flavors. From fresh, vibrant salads to hearty main courses,
-          our menu celebrates the best of Mediterranean cuisine. Join us for a
-          taste that feels like home, but with a twist that keeps you coming
-          back.
+          
         </h3> */}
       </div>
       <div className="flex justify-center items-center w-full  md:w-1/2 px-4 md:px-0">
         <img
-          src={HeroSplash}
+          src={heroSplash}
           alt="Banner"
           className="w-full object-cover rounded-lg"
         />

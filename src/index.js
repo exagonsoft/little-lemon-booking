@@ -1,16 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Home from './pages/HomePage';
-import reportWebVitals from './reportWebVitals';
-import './global.css'
-import MainLayout from './layouts/MainLayout';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import "./global.css";
+import ErrorBoundary from "./Services/ErrorBoundary";
+import App from "./App";
+import MainLayout from "./layouts/MainLayout";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <MainLayout>
-      <Home />
-    </MainLayout>
+    <ErrorBoundary>
+      <MainLayout>
+        <App />
+      </MainLayout>
+    </ErrorBoundary>
   </React.StrictMode>
 );
 
