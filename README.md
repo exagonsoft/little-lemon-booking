@@ -3,6 +3,8 @@
 
 Welcome to the **Little Lemon Restaurant** web application! This project is designed to showcase the unique experience that Little Lemon offers, from our delicious Mediterranean-inspired dishes to our friendly team. This web app includes key pages such as **About**, **Contact**, **Loading**, and **Error** pages, all built with React and styled using Tailwind CSS.
 
+![Poster](./src/assets/images/poster.png)
+
 [Project Website](https://master.d82nf9zlqp55c.amplifyapp.com/)
 
 ## Table of Contents
